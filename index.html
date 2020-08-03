@@ -82,7 +82,7 @@
                 function handleProductChange(product, isIncrease){
                 const productInput = document.getElementById(product + "-count");
                 const productCount = getInputValue(product);
-                // const phoneNewCount = phoneCount  - 1;
+                // const phoneNewCount = phoneCount  - 1; // phone total prise------------
                 var productNewCount = productCount;
                 if (isIncrease == true) {
                     productNewCount = productCount + 1;
@@ -91,7 +91,7 @@
                     productNewCount = productCount -1;
                 }
                 productInput.value = productNewCount;
-                // const productTotal = productNewCount * 59;
+                // const productTotal = productNewCount * 59;  // case total proce......
                 let productTotal = 0;
                 if (product == "phone") {
                     productTotal = productNewCount * 1219;
@@ -110,10 +110,10 @@
                 const caseCount = getInputValue("case");
                 const totalPrise = phoneCount * 1219 + caseCount  * 59;
                 document.getElementById("total-price").innerText = '$' + totalPrise;
-                
+                //text total price-------------
                 var textTotal = Math.round( totalPrise * 0.1);
                 document.getElementById('tax-amount').innerText = '$' + textTotal;
-
+                //grand total price-------------
                 const inTotal = totalPrise +  textTotal;
                 document.getElementById("grand-total").innerText = '$' + inTotal;
             }
